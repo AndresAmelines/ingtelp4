@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<HTML lang="es">
+<head>
+	<meta charset="utf-8"/>
+	<meta description="Actividad 4"/>
+	<link rel="stylesheet" type="text/css" href="css/fuentenueva.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<title>VLANS</title>
+</head>
+	<body>
+		<div id="contenedor">
+			<head>
+				<img src="img/banner.png">
+			</head>
+			<nav class="menuCSS3">
+				<ul class="">
+					<li>
+						<a href="index.html">Portada</a>
+					</li>	
+					<li>
+						<a href="vlans.html">VLANS</a>
+					</li>
+					<li>
+						<a href="redp.html">Red Plana</a>	
+					</li>
+					<li>
+						<a href="callc.html">Call Center</a>
+					</li>
+					<li>
+						<a href="ref.html">Referencias</a>
+					</li>
+				</ul>
+			</nav>
+
+			<section id="contenido">
+				<article class="articulos">
+					<strong>1.	Organicen el campus universitario en VLANS, de manera que existan diferentes subredes en el campus, se sugiere que implemente una para cada una de las facultades que cuenta la universidad (Ingeniería, Administración, Medicina, Derecho, Humanidades, Agrarias y Educación), y otra para el área administrativa que comprende los edificios administrativos, biblioteca y rectoría. Esta organización debe evidenciarse con direccionamiento IPv6 y también con el esquema de organización de los dispositivos que ustedes recomienden para modernizar la red (Routers, Switches, etc.) <br><br>
+
+					La facultad de sistemas del campus universitario estaría compuesta por:
+					</strong>
+					<P>						
+							<br><center><img src="img/Cua1.png"></center><br><br>
+
+					Esto con el fin de segmentar los equipos de cada facultad y limitar el acceso por motivos de seguridad. <br><br>
+					<strong>Diseño por edificio<br><br></strong>
+
+					<center><img src="img/Cua2.png"></center><br><br>
+
+					<strong>Ejemplo: </strong><br><br>
+					<center><img src="img/Cua3.png"></center><br><br>
+
+					De este modo se implementan un Switch para cada VLAN y/o independencias por medio de subredes dentro del bloque, garantizando la privacidad entre cada grupo de trabajo o piso del edificio, evitando así que desde otra facultad pueda ingresar a la información.<br><br>
+
+					<strong>Ejemplo2:</strong><br>
+
+					<center><img src="img/Cua4.png"></center><br><br>
+
+					Para el caso del campus el procedimiento es similar, a diferencia que ya no se usaría IPv4, sino IPv6, siendo más amplio para cubrir una mayor cobertura de dispositivos conectados e inclusive una mayor seguridad por la gran cantidad de dígitos y letras que se designa por dispositivos.<br><br>
+
+					<strong>Ejemplo de edificación por bloque:</strong><br><br>
+					<center><img src="img/Cua5.png"></center><br>
+
+					Vemos un ejemplo de la magnitud de la IPv6, el cual se podría designar inclusive de una dirección para cada bloque y de cada una desprender la cantidad de subredes que se desee. En número de direcciones que abarca es: 3.4 x 10 a la potencia de 38, equivalente a un trillón de direcciones para cada ser humano en el planeta.<br><br>
+
+					<center><img src="img/Cua6.png"></center><br>
+
+					El direccionamiento de la IPv6 inicia desde 0000 hasta FFFF. Es decir que para aplicarlo al campus una opción podría ser designar una IPv6 para cada bloque de la siguiente manera.<br><br>
+
+					Tomando como ejemplo la imagen anterior, se opta porque las direcciones comiencen con ceros para abreviarlos y reducir la dirección visualmente, teniendo en cuenta la regla de 3-1-4, el cual significa que los tres primeros segmentos son globales, es decir, que no se deben cambiar, y utilizar el cuarto o incluso más segmentos para distribuir las subredes.<br><br>
+
+					Aclaración: Estos tres primeros segmentos se define según la ubicación geográfica del mundo y según las empresas que ofrecen servicios de internet, ejemplo del IP por el servicio de internet que tenemos: 2001:BA11:B011.<br><br>
+
+					Se crea la siguiente red para el primer edificio: <br><br>
+					•	2001:BA11:B011:1000:0001:F001:F003:0001<br><br>
+					De este se desprenden las subredes necesarias para suplir las necesidades, dándole una capacidad de mil, lo que se considera suficiente para un edificio y la independencia de la facultad frente a las otras, para el segundo edificio solo cambia el número que está en rojo.<br><br>
+					•	2001:BA11:B011:2000:0001:F001:F003:0001<br><br>
+					Y así sucesivamente hasta llenar los diez bloques del campus universitario.<br>
+
+					<center><img src="img/Cua7.png"></center><br>
+
+					En este ejemplo observamos que de las mil direcciones IPv6 que tiene el edificio se pueden asignar de 100 para cada piso para identificar más fácil el número de IP por edificio y por piso, y así sucesivamente para los nueve edificios restantes y con los dispositivos, siendo controlados por Switch.<br><br>
+
+					Se hace uso del método EUI– 64 para asignar direccionamientos IPv6 de manera automática, haciendo uso del IP de la MAC del equipo, comprendiendo que son muchísimos dispositivos y manualmente tardaríamos demasiado.<br><br>
+
+					Ahora configuramos el esquema de red para el campus universitario de la siguiente materia.<br><br>
+
+					<center><img src="img/Cua8.png" width="780" height="380"></center><br><br>
+
+					<center><img src="img/Cua9.png" width="780" height="280"></center><br>
+
+					<center><img src="img/Cua10.png" width="780" height="280"></center><br>
+
+					<center><img src="img/Cua11.png" width="780" height="280"></center><br>
+
+					<center><img src="img/Cua12.png" width="780" height="280"></center><br>
+
+					<center><img src="img/Cua13.png" width="780" height="280"></center><br>
+
+					<center><img src="img/Cua14.png" width="780" height="280"></center><br>
+
+					<center><img src="img/Cua15.png" width="780" height="280"></center><br>
+
+					<center><img src="img/Cua16.png" width="780" height="280"></center><br>
+
+					<center><img src="img/Cua17.png" width="780" height="280"></center><br>
+
+					<center><img src="img/Cua18.png" width="780" height="280"></center><br>
+
+			</article>
+			</section>
+			<aside>
+				<center>
+					<a class="twitter-timeline" data-width="225" data-height="400" href="https://twitter.com/UniversidadUNAD?ref_src=twsrc%5Etfw">Tweets by UniversidadUNAD</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					<br>
+					
+				<h3>
+					<p>Redes </p>
+					<p>Sociales </p>
+					<p>UNAD</p>
+				</h3><br>
+				<li><a title="Síganos en Twitter - @universidadUNAD" href="http://twitter.com/niversidadUNAD">
+					<img alt="witter" src="img/twitter.png" width="50" style="margin:0 auto;">
+				</a>
+				</li>
+				<li><a title="Suscríbase a nuestro canal" href="http://www.youtube.com/universidadunad">
+					<img alt="Youtube" src="img/Youtube.png" width="50">
+				</a>
+				</li>
+				<li><a title="Síganos en Facebook" href="https://www.facebook.com/universidadUNAD">
+					<img alt="Facebook" src="img/face.png" width="50">
+				</a>
+				</li>
+				<li>
+				<a title="Síganos en Instagram" href="https://wwww.instagram.com/universidadunad/">
+				<img alt="Instagram" src="img/Instagram.png" width="50">
+				</a>
+				</li><br>
+				<h3>Contador de Visitas</h3>
+					<br>
+				<div id="sfczsmu3skjq6qece25g3wpuedr1mzf3nph"></div>
+					<script type="text/javascript" src="https://counter8.freecounter.ovh/private/counter.js?c=zsmu3skjq6qece25g3wpuedr1mzf3nph&down=async" async></script>
+					<noscript>
+						<a href="https://www.contadorvisitasgratis.com" title="contador web">
+							<img src="https://counter8.freecounter.ovh/private/contadorvisitasgratis.php?c=zsmu3skjq6qece25g3wpuedr1mzf3nph" border="0" title="contador web" alt="contador web"></a></noscript>
+			</aside>
+		
+			<footer>
+				<p>
+					<ul>
+				<li><br><center>
+				<img src="img/logUNAD.png" width="150">
+				</center></li>
+				<li><br><center>
+					Sede Principal José Celestino Mutis: Calle 14 Sur Nro. 14-23
+					PBX: (+57)1 3443700 Bogotá DC, Colombia
+					Línea nacional gratuita desde Colombia: 018000115223
+					Atencion al Usuario: atencionalusuario@unad.edu.co
+				</center></li>
+				<li><br><center>
+					CCAV Dosquebradas - Risaralda
+					Dirección: Carrera 23 con Diagonal 25 F Barrio Milán
+					Teléfono: (6) 3116599
+					Correo electrónico: pereira@unad.edu.co
+					Sitio web: https://occidente.unad.edu.co/dosquebradas
+				</center></li>
+			</ul>
+				</p>
+				<nav><center>
+				<p><br>
+					<ul>
+					<li>
+						<img src="img/calidad1.png" width="120" height="120">
+					</li>
+					<li>
+						<img src="img/calidad2.png" width="120" height="120">
+					</li>
+					<li>
+						<img src="img/calidad3.png" width="120" height="120">
+					</li>
+				</ul>
+				</p></nav>
+			</center>
+				<p><br><center>
+					Todos los derechos reservados &copy; 2017
+				</center></p>
+			</footer>
+		</div>
+	</body>
